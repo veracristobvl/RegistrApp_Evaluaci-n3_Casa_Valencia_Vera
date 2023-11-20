@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>generar-qr</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  
+  
+    <div style="width: 100%; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h2>Configuración de QR</h2>
+      <ion-list style="max-width: 20rem;" *ngIf="qr==false">
+        
+        <ion-item>
+        <ion-select label="Asignatura" type="number" placeholder="" [(ngModel)]="asignatura">
+          <ion-select-option value="{{docente.asignatura1}}">{{docente.asignatura1}}</ion-select-option>
+          <ion-select-option value="{{docente.asignatura2}}">{{docente.asignatura2}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input label="Sala" placeholder="Ingresa la Sala" [(ngModel)]="sala"></ion-input>
+      </ion-item>
+    
+      
+    </ion-list>
+    <ion-button style="height: 3rem; margin: auto;" (click) = "generarQR()" *ngIf="qr==false">Generar QR</ion-button>
+    
+    <div *ngIf="qr" style="width: 100%; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <qrcode [qrdata]="codigoQR" [width]="600" ></qrcode>
+      <ion-button style="height: 3rem; margin: auto; margin-bottom: 1rem;" color="success" (click) = "borrarQR()">Confirmar Asistencia</ion-button>
+      <ion-button style="height: 3rem; margin: auto;" (click) = "borrarQR()">Volver</ion-button>
+    </div>
+  </div>
+    
+</ion-content>

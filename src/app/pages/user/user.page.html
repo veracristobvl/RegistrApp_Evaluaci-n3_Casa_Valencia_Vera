@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  
+  <div style="padding-top: 5rem; display: flex; flex-direction: column; justify-content: center; align-items: center;"  >
+    <h1 >Nombre Docente: {{newDocente.nombre}} {{ newDocente.apellido }}   </h1>
+  
+    
+    <!--
+    <div class="form">
+      <form action="" (ngSubmit)="modificarDatos()">
+        <div class="input-docente-div" style="align-items: center; ">
+          <div style="display: flex;">
+            <ion-icon name="mail-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+            <input [(ngModel)]="newDocente.email"  type="text" placeholder="Email" name="email"><br><br>
+            <ion-button (click)="modificarDatos()" color="success">Modificar</ion-button>
+          </div>
+        </div>
+        <div class="input-docente-div" style="align-items: center; ">
+          <div style="display: flex;">
+            <ion-icon name="call-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+            <input [(ngModel)]="newDocente.telefono"  type="text" placeholder="Email" name="telefono"><br><br>
+            <ion-button (click)="modificarDatos()"color="success">Modificar</ion-button>
+          </div>
+        </div>
+        <div class="input-docente-div" style="align-items: center; ">
+          <div style="display: flex;">
+            <ion-icon name="shield-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+            <input [(ngModel)]="newDocente.contrasena"  type="text" placeholder="Email" name="contrasena"><br><br>
+            <ion-button (click)="modificarDatos()" color="success">Modificar</ion-button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+     <button class="btn-login" style="margin-top: 0rem; font-weight: bold; font-size: 1rem; color: #052c54;"  type="submit" >Guardar Cambios</button> -->
+
+    <ion-list style="max-width: 20rem;" >
+    
+    <ion-item>
+      <ion-icon name="mail-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+      <ion-input label="" placeholder="" [(ngModel)]="newDocente.email"></ion-input>
+      <ion-button (click)="modificarDatos()" color="success">Modificar</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+      <ion-input label="" placeholder="" [(ngModel)]="newDocente.telefono"></ion-input>
+      <ion-button (click)="modificarDatos()" color="success">Modificar</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="shield-outline" size="large" style="border: 0px solid black; margin:auto;"></ion-icon>
+      <ion-input label="" placeholder="" [(ngModel)]="newDocente.contrasena"></ion-input>
+      <ion-button (click)="modificarDatos()" color="success">Modificar</ion-button>
+    </ion-item>
+  
+    
+  </ion-list>
+  
+  </div>  
+
+
+</ion-content>
